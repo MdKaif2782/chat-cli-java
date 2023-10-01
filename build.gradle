@@ -10,6 +10,17 @@ repositories {
 }
 
 dependencies {
+    //Firebase SDK
+    implementation 'com.google.firebase:firebase-admin:9.2.0'
+    //JSON Simple
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    //Azure SDK
+    implementation("com.azure.resourcemanager:azure-resourcemanager-webpubsub:1.1.0-beta.1")
+    // https://mvnrepository.com/artifact/com.azure/azure-messaging-webpubsub
+    implementation 'com.azure:azure-messaging-webpubsub:1.2.8'
+    // https://mvnrepository.com/artifact/org.java-websocket/Java-WebSocket
+    implementation 'org.java-websocket:Java-WebSocket:1.5.4'
+
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
