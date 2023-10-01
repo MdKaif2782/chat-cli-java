@@ -15,7 +15,7 @@ import java.net.URISyntaxException;
 public class PubSub {
     public static WebPubSubServiceClient connection(String hub) {
         return new WebPubSubServiceClientBuilder()
-                .connectionString("Endpoint=https://freepubsub.webpubsub.azure.com;AccessKey=M6bVcarLf8aREewoSUCooK+tfHRE2Cgg2/J/loUwjF0=;Version=1.0;")
+                .connectionString(System.getenv("endpoint"))
                 .hub(hub)
                 .buildClient();
     }

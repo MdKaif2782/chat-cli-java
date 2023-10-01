@@ -25,6 +25,15 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
+// Build Jar using PubSub.java as main
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'ai.kf.AzurePubSub'
+        )
+    }
+}
+
 test {
     useJUnitPlatform()
 }

@@ -16,7 +16,13 @@ public class AzurePubSub {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\nEnter your name: ");
         String name = scanner.nextLine();
-        PubSub.startListener("chat",name);
+        new Thread(()->{
+            try {
+                PubSub.startListener("chat",name);
+            } catch (URISyntaxException | IOException e) {
+                throw new RuntimeException(e);
+            }
+        }).start();
         PubSub.sendMessage("chat", name + " has joined the chat!");
         while (true) {
             String message = scanner.nextLine();
